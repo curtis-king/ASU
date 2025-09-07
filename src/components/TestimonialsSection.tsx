@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import "keen-slider/keen-slider.min.css";
 import { useKeenSlider } from "keen-slider/react";
-import { useState } from "react";
 
 const testimonials = [
   {
@@ -31,7 +30,6 @@ const testimonials = [
 ];
 
 function TestimonialsSection() {
-  const [currentSlide, setCurrentSlide] = useState(0);
   const [sliderRef, instanceRef] = useKeenSlider({
     loop: true,
     slides: { perView: 1, spacing: 24 },
@@ -42,9 +40,6 @@ function TestimonialsSection() {
       "(min-width: 1024px)": {
         slides: { perView: 3, spacing: 40 },
       },
-    },
-    slideChanged(s) {
-      setCurrentSlide(s.track.details.rel);
     },
   });
 

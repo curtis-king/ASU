@@ -1,5 +1,4 @@
 
-import { useState } from "react";
 import { motion } from "framer-motion";
 import "keen-slider/keen-slider.min.css";
 import { useKeenSlider } from "keen-slider/react";
@@ -36,7 +35,6 @@ const articles = Array(3).fill(baseArticles).flat().map((a, i) => ({ ...a, id: i
 
 
 export default function NewsSection() {
-  const [currentSlide, setCurrentSlide] = useState(0);
   const [sliderRef, instanceRef] = useKeenSlider({
     loop: true,
     slides: { perView: 1, spacing: 16 },
@@ -47,9 +45,6 @@ export default function NewsSection() {
       "(min-width: 1024px)": {
         slides: { perView: 4, spacing: 32 },
       },
-    },
-    slideChanged(s) {
-      setCurrentSlide(s.track.details.rel);
     },
   });
 
@@ -97,7 +92,7 @@ export default function NewsSection() {
                 </a>
                 <div className="pb-4 flex justify-center">
                   <a href={a.url} target="_blank" rel="noopener noreferrer" className="bg-[#0205f4] text-white px-5 py-2 rounded-full font-bold shadow-md hover:bg-indigo-700 transition-colors text-sm">
-                    Voir l'article
+                    Voir l&apos;article
                   </a>
                 </div>
               </motion.div>

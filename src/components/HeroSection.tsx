@@ -36,7 +36,7 @@ export default function HeroSection() {
       </div>
       <div className="mt-8 flex items-center justify-center">
         <Button className="bg-white text-[#0205f4] hover:bg-gray-100 px-12 py-5 text-lg font-bold rounded-full shadow-md min-w-[220px] transition-colors">
-          Découvrir l'ASU
+          Découvrir l&apos;ASU
         </Button>
       </div>
     </>

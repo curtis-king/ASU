@@ -35,12 +35,12 @@ export default function AboutSection() {
           viewport={{ once: true }}
           className="w-full md:w-1/2 text-center md:text-left"
         >
-          <h2 className="text-3xl md:text-4xl font-light font-sans tracking-wide text-[#0205f4] mb-6">À propos de l'ASU</h2>
+          <h2 className="text-3xl md:text-4xl font-light font-sans tracking-wide text-[#0205f4] mb-6">À propos de l&apos;ASU</h2>
           <p className="text-lg md:text-xl text-gray-700 font-extralight font-sans mb-4">
-            L'Association Serment Universel (ASU) œuvre depuis 1998 pour l'accompagnement psychosocial, la prévention et le soutien auprès des communautés du Congo. Notre mission : placer l'humain au cœur de l'action solidaire.
+            L&apos;Association Serment Universel (ASU) œuvre depuis 1998 pour l&apos;accompagnement psychosocial, la prévention et le soutien auprès des communautés du Congo. Notre mission : placer l&apos;humain au cœur de l&apos;action solidaire.
           </p>
           <p className="text-base md:text-lg text-gray-600 font-extralight font-sans">
-            Nous croyons en la force du collectif, en l'espoir et en la dignité pour tous. Grâce à nos bénévoles et partenaires, nous menons des actions concrètes pour améliorer la vie des plus vulnérables.
+            Nous croyons en la force du collectif, en l&apos;espoir et en la dignité pour tous. Grâce à nos bénévoles et partenaires, nous menons des actions concrètes pour améliorer la vie des plus vulnérables.
           </p>
         </motion.div>
       </motion.div>
