@@ -14,7 +14,7 @@ export default function GallerySection() {
     <section id="gallery" className="py-20 bg-gradient-to-br from-blue-50 via-white to-blue-100">
       <div className="max-w-6xl mx-auto px-4">
         <h2 className="text-3xl md:text-4xl font-light font-sans tracking-wide text-[#0205f4] mb-10 text-center">
-          Galerie <span className="text-indigo-400">d'images</span>
+          Galerie <span className="text-indigo-400">d&apos;images</span>
         </h2>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
           {images.map((src, i) => (

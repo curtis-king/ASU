@@ -1,5 +1,4 @@
-import { motion, useAnimation } from "framer-motion";
-import { useEffect } from "react";
+import { motion } from "framer-motion";
 
 const stats = [
   {
@@ -25,14 +24,11 @@ const stats = [
 ];
 
 function AnimatedCounter({ value }: { value: number }) {
-  const controls = useAnimation();
-  useEffect(() => {
-    controls.start({ count: value }, { duration: 1.8, ease: "easeOut" });
-  }, [value, controls]);
   return (
     <motion.span
-      initial={{ count: 0 }}
-      animate={controls}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 1.8, ease: "easeOut" }}
       className="text-3xl md:text-4xl font-bold text-[#0205f4]"
     >
       {Math.floor(value).toLocaleString()}
