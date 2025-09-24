@@ -24,19 +24,27 @@ const stats = [
   },
 ];
 
+import { useState } from "react";
+import { animate } from "framer-motion";
+
 function AnimatedCounter({ value }: { value: number }) {
-  const controls = useAnimation();
+  const [displayValue, setDisplayValue] = useState(0);
+
   useEffect(() => {
-    controls.start({ count: value }, { duration: 1.8, ease: "easeOut" });
-  }, [value, controls]);
+    const controls = animate(0, value, {
+      duration: 1.8,
+      ease: [0.17, 0.67, 0.83, 0.67],
+      onUpdate(latest) {
+        setDisplayValue(latest);
+      },
+    });
+    return () => controls.stop();
+  }, [value]);
+
   return (
-    <motion.span
-      initial={{ count: 0 }}
-      animate={controls}
-      className="text-3xl md:text-4xl font-bold text-[#0205f4]"
-    >
-      {Math.floor(value).toLocaleString()}
-    </motion.span>
+    <span className="text-3xl md:text-4xl font-bold text-[#0205f4]">
+      {Math.floor(displayValue).toLocaleString()}
+    </span>
   );
 }
 

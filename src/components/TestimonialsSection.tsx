@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import Image from "next/image";
 import "keen-slider/keen-slider.min.css";
 import { useKeenSlider } from "keen-slider/react";
 import { useState } from "react";
@@ -65,7 +66,7 @@ function TestimonialsSection() {
               viewport={{ once: true }}
               className="keen-slider__slide bg-white/70 backdrop-blur-lg border border-blue-100 rounded-3xl shadow-2xl p-8 flex flex-col items-center text-center mx-2 hover:shadow-blue-200 transition-all duration-300"
             >
-              <img src={t.image} alt={t.name} className="w-20 h-20 rounded-full object-cover border-4 border-white shadow-lg mb-4 bg-gray-100" />
+              <Image src={t.image} alt={t.name} width={80} height={80} className="w-20 h-20 rounded-full object-cover border-4 border-white shadow-lg mb-4 bg-gray-100" />
               <blockquote className="text-gray-700 italic font-light mb-4">“{t.text}”</blockquote>
               <span className="text-[#0205f4] font-semibold">{t.name}</span>
               <span className="text-xs text-gray-500 font-extralight">{t.role}</span>

@@ -1,5 +1,6 @@
 
 import { useState } from "react";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import "keen-slider/keen-slider.min.css";
 import { useKeenSlider } from "keen-slider/react";
@@ -78,7 +79,7 @@ export default function NewsSection() {
                   className="w-full flex flex-col items-center"
                 >
                   <div className="relative w-full h-48 flex items-center justify-center overflow-hidden">
-                    <img src={a.thumbnail} alt={a.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" />
+                    <Image src={a.thumbnail} alt={a.title} width={400} height={192} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" />
                     {a.type === "youtube" && (
                       <span className="absolute inset-0 flex items-center justify-center">
                         <svg className="w-16 h-16 text-white/90 group-hover:text-indigo-400 transition-colors" fill="currentColor" viewBox="0 0 24 24">

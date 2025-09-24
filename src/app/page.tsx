@@ -5,7 +5,6 @@ import MobileMenuDialog from "../components/MobileMenuDialog";
 import AnnouncementBanner from "../components/AnnouncementBanner";
 import HeroSection from "../components/HeroSection";
 import AboutSection from "../components/AboutSection";
-import StatsSection from "../components/StatsSection";
 import StatsCircleSection from "../components/StatsCircleSection";
 import ActionsSection from "../components/ActionsSection";
 import GallerySection from "../components/GallerySection";
@@ -45,7 +44,6 @@ export default function Home() {
           </div>
         </section>
   <StatsCircleSection />
-  {/* <StatsSection /> */}
   <AboutSection />
   <ActionsSection />
   <GallerySection />

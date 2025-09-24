@@ -34,7 +34,7 @@ function AnimatedCircleCounter({ value, color }: { value: number; color: string 
   const [displayValue, setDisplayValue] = useState(0);
 
   useEffect(() => {
-    let start = 0;
+  const start = 0;
     const duration = 1800;
     const startTime = performance.now();
 

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Navbar({ onOpenMenu }: { onOpenMenu: () => void }) {
   return (
@@ -14,7 +15,7 @@ export default function Navbar({ onOpenMenu }: { onOpenMenu: () => void }) {
         <div className="flex lg:flex-1">
           <Link href="#" className="-m-1.5 p-1.5">
             <span className="sr-only">Association Serment Universel (ASU)</span>
-            <img src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=600" alt="ASU Logo" className="h-8 w-auto" />
+            <Image src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=600" alt="ASU Logo" width={32} height={32} className="h-8 w-auto" />
           </Link>
         </div>
         <div className="flex lg:hidden">
@@ -33,7 +34,7 @@ export default function Navbar({ onOpenMenu }: { onOpenMenu: () => void }) {
           <Link href="#contact" className="text-sm font-semibold text-white bg-transparent border border-white px-6 py-2 rounded-full hover:bg-white/10 hover:text-white transition-colors">Contact</Link>
         </div>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-          <Link href="#don" className="text-sm font-semibold text-white bg-transparent border border-white px-8 py-2 rounded-full shadow-md hover:bg-white/10 hover:text-white transition-colors">Faire un don</Link>
+          <Link href="/faire-un-don" className="text-sm font-semibold text-white bg-transparent border border-white px-8 py-2 rounded-full shadow-md hover:bg-white/10 hover:text-white transition-colors">Faire un don</Link>
         </div>
       </nav>
     </header>
